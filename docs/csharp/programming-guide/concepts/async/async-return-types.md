@@ -33,7 +33,7 @@ In the following example, the `WaitAndApologizeAsync` method doesn't contain a `
 
 :::code language="csharp" source="snippets/async-return-types/async-returns2.cs" ID="TaskReturn":::
 
-`WaitAndApologizeAsync` is awaited by using an await statement instead of an await expression, similar to the calling statement for a synchronous void-returning method. The application of an await operator in this case doesn't produce a value. When the right operand of an `await` is a <xref:System.Threading.Tasks.Task%601>, the `await` expression produces a result of `T`. When the right operand of an `await` is a <xref:System.Threading.Tasks.Task>, the `await` and its operand are a statement.
+`WaitAndApologizeAsync` is awaited by using an await statement instead of an await expression, similar to the calling statement for a synchronous void-returning method. The application of an await operator in this case doesn't produce a value. When the right operand of an `await` is a <xref:System.Threading.Tasks.Task%601>, the `await` expression produces a result of `TResult`. When the right operand of an `await` is a <xref:System.Threading.Tasks.Task>, the `await` and its operand are a statement.
 
 You can separate the call to `WaitAndApologizeAsync` from the application of an await operator, as the following code shows. However, remember that a `Task` doesn't have a `Result` property, and that no value is produced when an await operator is applied to a `Task`.
 
